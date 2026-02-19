@@ -76,7 +76,7 @@ public class Tienda {
     }
 
     /**
-     * Se pide los datos por teclados y añadimos un 
+     * Se pide los datos por teclados y añadimos un
      * producto al inventario.
      */
     private static void anadirProducto() {
@@ -96,7 +96,7 @@ public class Tienda {
     }
 
     /**
-     * Imprime todos los productos del inventario, con su stock, nokbre y  precio.
+     * Imprime todos los productos del inventario, con su stock, nokbre y precio.
      */
     private static void mostrarInventario() {
 
@@ -111,8 +111,8 @@ public class Tienda {
         }
     }
 
-    /** 
-     * Gestionamos el proceso de la venta: 
+    /**
+     * Gestionamos el proceso de la venta:
      * - Miramos si tenemos el procucto
      * - Comprobamos el stock
      * - Aplica descuento si supera el precio minimo
@@ -120,14 +120,14 @@ public class Tienda {
      */
     private static void realizarVenta() {
 
-        System.out.println("\n--- VENTA ---");
+        System.out.println("--- VENTA ---");
         System.out.print("Introduzca nombre del producto a vender: ");
         String nombre = sc.next();
 
         Producto producto = buscarProducto(nombre);
 
         if (producto == null) {
-            System.out.println("Error: Producto no encontrado.");
+            System.out.println("Producto no encontrado.");
             return;
         }
 
@@ -143,7 +143,7 @@ public class Tienda {
         double total = producto.calcularPrecio(cantidad);
 
         if (total > PRECIO_PARA_DESCUENTO) {
-            System.out.println("¡Oferta! Descuento aplicado.");
+            System.out.println("Descuento aplicado.");
             total = total - (total * PORCENTAJE_DESCUENTO);
         }
 
