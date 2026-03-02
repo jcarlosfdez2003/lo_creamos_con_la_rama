@@ -79,7 +79,7 @@ public class Tienda {
      * Se pide los datos por teclados y añadimos un
      * producto al inventario.
      */
-    private static void anadirProducto() {
+    static void anadirProducto() {
 
         System.out.print("Nombre del producto: ");
         String nombre = sc.next();
